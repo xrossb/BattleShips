@@ -1,4 +1,3 @@
-using System;
 using SwinGameSDK;
 
 namespace Battleships
@@ -7,23 +6,26 @@ namespace Battleships
     {
         public static void Main()
         {
-            //Open the game window
-            SwinGame.OpenGraphicsWindow("GameMain", 800, 600);
-            SwinGame.ShowSwinGameSplashScreen();
+            // Opens a new Graphics Window
+            SwinGame.OpenGraphicsWindow("Battle Ships", 800, 600);
 
-            //Run the game loop
-            while(false == SwinGame.WindowCloseRequested())
+            // Load Resources
+            LoadResources();
+
+            SwinGame.PlayMusic(GameMusic("Background"));
+
+            // Game Loop
+            do
             {
-                //Fetch the next batch of UI interaction
-                SwinGame.ProcessEvents();
-
-                //Clear the screen and draw the framerate
-                SwinGame.ClearScreen(Color.White);
-                SwinGame.DrawFramerate(0,0);
-
-                //Draw onto the screen
-                SwinGame.RefreshScreen(60);
+                HandleUserInput();
+                DrawScreen();
             }
+            while (!SwinGame.WindowCloseRequested() == true | CurrentState == GameState.Quitting);
+
+            SwinGame.StopMusic();
+
+            // Free Resources and Close Audio, to end the program.
+            FreeResources();
         }
     }
 }
