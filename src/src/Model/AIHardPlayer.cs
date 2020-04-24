@@ -1,11 +1,4 @@
-﻿/// <summary>
-/// AIHardPlayer is a type of player. This AI will know directions of ships
-/// when it has found 2 ship tiles and will try to destroy that ship. If that ship
-/// is not destroyed it will shoot the other way. Ship still not destroyed, then
-/// the AI knows it has hit multiple ships. Then will try to destoy all around tiles
-/// that have been hit.
-/// </summary>
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -18,6 +11,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
 
+/// <summary>
+/// AIHardPlayer is a type of player. This AI will know directions of ships
+/// when it has found 2 ship tiles and will try to destroy that ship. If that ship
+/// is not destroyed it will shoot the other way. Ship still not destroyed, then
+/// the AI knows it has hit multiple ships. Then will try to destoy all around tiles
+/// that have been hit.
+/// </summary>
 public class AIHardPlayer : AIPlayer
 {
 

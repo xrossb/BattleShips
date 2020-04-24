@@ -13,13 +13,9 @@ using Microsoft.VisualBasic;
 using SwinGameSDK;
 
 /// <summary>
-
 /// The EndingGameController is responsible for managing the interactions at the end
-
 /// of a game.
-
 /// </summary>
-
 static class EndingGameController
 {
 

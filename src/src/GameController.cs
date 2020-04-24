@@ -13,13 +13,9 @@ using Microsoft.VisualBasic;
 using SwinGameSDK;
 
 /// <summary>
-
 /// The GameController is responsible for controlling the game,
-
 /// managing user input, and displaying the current state of the
-
 /// game.
-
 /// </summary>
 public static class GameController
 {

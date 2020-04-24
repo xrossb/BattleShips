@@ -13,9 +13,7 @@ using Microsoft.VisualBasic;
 using SwinGameSDK;
 
 /// <summary>
-
 /// The battle phase is handled by the DiscoveryController.
-
 /// </summary>
 static class DiscoveryController
 {

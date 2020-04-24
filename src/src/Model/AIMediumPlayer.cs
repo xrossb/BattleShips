@@ -1,8 +1,4 @@
-﻿/// <summary>
-/// The AIMediumPlayer is a type of AIPlayer where it will try and destroy a ship
-/// if it has found a ship
-/// </summary>
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -15,6 +11,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
 
+/// <summary>
+/// The AIMediumPlayer is a type of AIPlayer where it will try and destroy a ship
+/// if it has found a ship
+/// </summary>
 public class AIMediumPlayer : AIPlayer
 {
     /// <summary>
