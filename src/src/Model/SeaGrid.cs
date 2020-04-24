@@ -16,7 +16,7 @@ namespace Battleships.Model
     {
         private const int _WIDTH = 10;
         private const int _HEIGHT = 10;
-        private Tile[,] _GameTiles = new Tile[Width, Height];
+        private Tile[,] _GameTiles;
         private Dictionary<ShipName, Ship> _Ships;
         private int _ShipsKilled = 0;
 
@@ -68,7 +68,7 @@ namespace Battleships.Model
         /// <param name="x">x coordinate of the tile</param>
         /// <param name="y">y coordiante of the tile</param>
         /// <returns></returns>
-        public TileView get_Item(int x, int y)
+        public TileView Item(int x, int y)
         {
             return _GameTiles[x, y].View;
         }
@@ -97,6 +97,8 @@ namespace Battleships.Model
         /// </summary>
         public SeaGrid(Dictionary<ShipName, Ship> ships)
         {
+            _GameTiles = new Tile[Width, Height];
+
             // fill array with empty Tiles
             int i;
             var loopTo = Width - 1;
@@ -118,7 +120,7 @@ namespace Battleships.Model
         /// <param name="direction">the direction the ship is going</param>
         public void MoveShip(int row, int col, ShipName ship, Direction direction)
         {
-            var newShip = this._Ships(ship);
+            var newShip = this._Ships[ship];
             newShip.Remove();
             AddShip(row, col, direction, newShip);
         }
@@ -138,7 +140,7 @@ namespace Battleships.Model
                 int currentRow = row;
                 int currentCol = col;
                 int dRow, dCol;
-                if (direction == direction.LeftRight)
+                if (direction == Direction.LeftRight)
                 {
                     dRow = 0;
                     dCol = 1;
