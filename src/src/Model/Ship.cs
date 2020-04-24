@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 /// <summary>
 /// A Ship has all the details about itself. For example the shipname,
 /// size, number of hits taken and the location. Its able to add tiles,
@@ -6,9 +8,6 @@
 /// <remarks>
 /// Deployment information is supplied to allow ships to be drawn.
 /// </remarks>
-
-using System.Collections.Generic;
-
 namespace Battleships.Model
 {
     public class Ship

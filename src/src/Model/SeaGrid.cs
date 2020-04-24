@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 /// <summary>
 /// The SeaGrid is the grid upon which the ships are deployed.
 /// </summary>
@@ -6,10 +9,6 @@
 /// grid. This can be used in conjuncture with the SeaGridAdapter to
 /// mask the position of the ships.
 /// </remarks>
-
-using System;
-using System.Collections.Generic;
-
 namespace Battleships.Model
 {
     public partial class SeaGrid : ISeaGrid
