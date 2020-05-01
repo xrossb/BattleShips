@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Battleships.Model;
 using SwinGameSDK;
 
@@ -91,7 +91,7 @@ namespace Battleships
 
             // Calculate the row/col clicked
             int row, col;
-            row = Convert.ToInt32(Math.Floor((mouse.Y) / (double)(UtilityFunctions.CELL_HEIGHT + UtilityFunctions.CELL_GAP)));
+            row = Convert.ToInt32(Math.Floor((mouse.Y - UtilityFunctions.FIELD_TOP) / (double)(UtilityFunctions.CELL_HEIGHT + UtilityFunctions.CELL_GAP)));
             col = Convert.ToInt32(Math.Floor((mouse.X - UtilityFunctions.FIELD_LEFT) / (double)(UtilityFunctions.CELL_WIDTH + UtilityFunctions.CELL_GAP)));
 
             if (row >= 0 & row < GameController.HumanPlayer.PlayerGrid.Height)
