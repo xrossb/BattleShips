@@ -53,6 +53,7 @@
     <Compile Include="src\Model\AIPlayer.cs" />
     <Compile Include="src\Model\AttackResult.cs" />
     <Compile Include="src\Model\BattleshipGame.cs" />
+    <Compile Include="src\Model\AIEasyPlayer.cs" />
     <Compile Include="src\Model\Direction.cs" />
     <Compile Include="src\Model\ISeaGrid.cs" />
     <Compile Include="src\Model\Player.cs" />
