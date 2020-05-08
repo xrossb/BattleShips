@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Battleships.Model;
 using SwinGameSDK;
@@ -145,6 +145,8 @@ namespace Battleships
             Audio.PlaySoundEffect(GameResources.GameSound("Hit"));
 
             UtilityFunctions.DrawAnimationSequence();
+
+            _theGame.Player.AddScore();
         }
 
         private static void PlayMissSequence(int row, int column, bool showAnimation)
@@ -155,6 +157,7 @@ namespace Battleships
             Audio.PlaySoundEffect(GameResources.GameSound("Miss"));
 
             UtilityFunctions.DrawAnimationSequence();
+            _theGame.Player.RemoveScore();
         }
 
         /// <summary>
@@ -188,7 +191,7 @@ namespace Battleships
                 {
                     PlayHitSequence(result.Row, result.Column, isHuman);
                     Audio.PlaySoundEffect(GameResources.GameSound("Sink"));
-
+                        
                     while (Audio.SoundEffectPlaying(GameResources.GameSound("Sink")))
                     {
                         SwinGame.Delay(10);
