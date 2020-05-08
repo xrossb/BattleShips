@@ -55,6 +55,8 @@ namespace Battleships
             const int SHOTS_TOP = 157;
             const int HITS_TOP = 206;
             const int SPLASH_TOP = 256;
+            const int POINTS_LEFT = 350;
+            const int POINTS_TOP = 85;
 
             if ((SwinGame.KeyDown(KeyCode.LeftShiftKey) | SwinGame.KeyDown(KeyCode.RightShiftKey)) & SwinGame.KeyDown(KeyCode.CKey))
                 UtilityFunctions.DrawField(GameController.HumanPlayer.EnemyGrid, GameController.ComputerPlayer, true);
@@ -67,6 +69,7 @@ namespace Battleships
             SwinGame.DrawText(GameController.HumanPlayer.Shots.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SHOTS_TOP);
             SwinGame.DrawText(GameController.HumanPlayer.Hits.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, HITS_TOP);
             SwinGame.DrawText(GameController.HumanPlayer.Missed.ToString(), Color.White, GameResources.GameFont("Menu"), SCORES_LEFT, SPLASH_TOP);
+            SwinGame.DrawText($"Score: {GameController.HumanPlayer.Score}", Color.Aqua, GameResources.GameFont("Courier"), POINTS_LEFT, POINTS_TOP);
         }
     }
 }
