@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Battleships.Model;
 using SwinGameSDK;
@@ -100,7 +100,7 @@ namespace Battleships
 
                 default:
                 {
-                    _ai = new AIHardPlayer(_theGame);
+                    _ai = new AIEasyPlayer(_theGame);
                     break;
                 }
             }

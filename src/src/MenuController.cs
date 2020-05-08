@@ -1,4 +1,4 @@
-﻿using Battleships.Model;
+using Battleships.Model;
 using SwinGameSDK;
 
 namespace Battleships
@@ -294,13 +294,13 @@ namespace Battleships
             {
                 case SETUP_MENU_EASY_BUTTON:
                 {
-                    GameController.SetDifficulty(AIOption.Hard);
+                    GameController.SetDifficulty(AIOption.Easy);
                     break;
                 }
 
                 case SETUP_MENU_MEDIUM_BUTTON:
                 {
-                    GameController.SetDifficulty(AIOption.Hard);
+                    GameController.SetDifficulty(AIOption.Medium);
                     break;
                 }
 
