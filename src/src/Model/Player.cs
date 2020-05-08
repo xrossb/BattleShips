@@ -20,6 +20,8 @@ namespace Battleships.Model
         private int _shots;
         private int _hits;
         private int _misses;
+        private int _score;
+        private int _streak;
 
         /// <summary>
         /// Returns the game that the player is part of.
@@ -167,8 +169,20 @@ namespace Battleships.Model
                 if (IsDestroyed)
                     return 0;
                 else
-                    return (Hits * 12) - Shots - (PlayerGrid.ShipsKilled * 20);
+                    return _score;
             }
+        }
+
+        public void AddScore()
+        {
+            _streak += 1;
+            _score += _streak * 10;
+        }
+
+        public void RemoveScore()
+        {
+            _streak = 0;
+            _score -= 1;
         }
 
         /// <summary>
