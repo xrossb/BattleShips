@@ -1,5 +1,6 @@
 using Battleships.Model;
 using SwinGameSDK;
+using System;
 
 namespace Battleships
 {
@@ -278,7 +279,8 @@ namespace Battleships
                 //Perform quit
                 case MAIN_MENU_QUIT_BUTTON:
                 {
-                    GameController.EndDeployment();
+                    //GameController.EndDeployment();
+                    GameController.EndCurrentState();
                     break;
                 }
             }
@@ -344,6 +346,7 @@ namespace Battleships
                 {
                     GameController.AddNewState(GameState.Quitting);
                     GameController.EndCurrentState();
+                    
                     break;
                 }
             }
