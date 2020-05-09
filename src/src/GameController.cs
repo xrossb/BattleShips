@@ -353,6 +353,7 @@ namespace Battleships
                     HighScoreController.HandleHighScoreInput();
                     break;
                 }
+
             }
 
             UtilityFunctions.UpdateAnimations();
@@ -411,6 +412,7 @@ namespace Battleships
                     HighScoreController.DrawHighScores();
                     break;
                 }
+
             }
 
             UtilityFunctions.DrawAnimations();
@@ -445,6 +447,7 @@ namespace Battleships
         public static void EndCurrentState()
         {
             _state.Pop();
+            SwinGame.CloseWindow("Battle Ships");
         }
 
         /// <summary>
